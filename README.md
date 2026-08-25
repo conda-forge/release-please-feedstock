@@ -42,31 +42,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `release-please` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install release-please
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install release-please
 ```
 
-It is possible to list all of the versions of `release-please` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add release-please
+# for installing globally
+pixi global install release-please
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `release-please` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search release-please --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search release-please --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search release-please --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -78,6 +120,8 @@ mamba repoquery whoneeds release-please --channel conda-forge
 # List dependencies of `release-please`:
 mamba repoquery depends release-please --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
